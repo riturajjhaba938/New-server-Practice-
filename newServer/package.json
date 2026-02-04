@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  },
+  "name": "newserver",
+  "version": "1.0.0",
+  "description": "New server",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riturajjhaba938/New-server-Practice-.git"
+  },
+  "author": "rituraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riturajjhaba938/New-server-Practice-/issues"
+  },
+  "homepage": "https://github.com/riturajjhaba938/New-server-Practice-#readme"
+}
