@@ -3,6 +3,10 @@ const users = [
   { id: 2, name: "Priyesha", role: "mentor" }
 ];
 
+const express = require("express");
+
+const app = express();
+
 app.get("/users", (req, res) => {
   res.status(200).json(users);
 });
@@ -36,9 +40,7 @@ app.post("/users", (req, res) => {
 });
 
 
-const express = require("express");
 
-const app = express();
 
 app.get("/", (req, res) => {
   res.send("Express server is running");
