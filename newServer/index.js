@@ -11,7 +11,12 @@ const students = [
   { studentName: "AMAN KUMAR", University: "SUxCG 702", UniversityUID: 108500 },
   { studentName: "AMRIT RAJ", University: "SUxCG 702", UniversityUID: 108587 },
   { studentName: "Rituraj Jha", University: "SUxCG 702", UniversityUID: 108458 },
-  { studentName: "Nikhil Raj", University: "SUxCG 702", UniversityUID: 108459 }
+  { studentName: "Nikhil Raj", University: "SUxCG 702", UniversityUID: 108459 },
+  { studentName: "Harshid Soni", University: "SUxCG 702", UniversityUID: 108647 },
+  { studentName: "Vedant Patel", University: "SUxCG 702", UniversityUID: 108708 },
+  { studentName: "Ankit Yadav", University: "SUxCG 702", UniversityUID: 108436 },
+  { studentName: "Sumit Kumar", University: "SUxCG 702", UniversityUID: 108403 },
+  { studentName: "Sushant Ravi", University: "SUxCG 702", UniversityUID: 108619 }
 ];
 
 /* Home route */
