@@ -11,7 +11,7 @@ const students = [
   { studentName: "AMAN KUMAR", University: "SUxCG 702", UniversityUID: 108500 },
   { studentName: "AMRIT RAJ", University: "SUxCG 702", UniversityUID: 108587 },
   { studentName: "Rituraj Jha", University: "SUxCG 702", UniversityUID: 108458 },
-  { studentName: "Rituraj Jha", University: "SUxCG 702", UniversityUID: 108459 }
+  { studentName: "Nikhil Raj", University: "SUxCG 702", UniversityUID: 108459 }
 ];
 
 /* Home route */
