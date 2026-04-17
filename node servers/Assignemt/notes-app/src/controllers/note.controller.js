@@ -241,3 +241,32 @@ exports.deleteNote = async (req, res) => {
     });
   }
 };
+
+exports.deleteBulkNotes = async (req, res) => {
+  try {
+    const { ids } = req.body;
+
+    if (!ids || !Array.isArray(ids) || ids.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "ids array is missing or empty",
+        data: null
+      });
+    }
+
+    const result = await Note.deleteMany({ _id: { $in: ids } });
+
+    return res.status(200).json({
+      success: true,
+      message: `${result.deletedCount} notes deleted successfully`,
+      data: null
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+      data: null
+    });
+  }
+};
