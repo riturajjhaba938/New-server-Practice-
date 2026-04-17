@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Note = require('../models/note.model');
 
 exports.createNote = async (req, res) => {
@@ -66,6 +67,43 @@ exports.getAllNotes = async (req, res) => {
       success: true,
       message: "Notes fetched successfully",
       data: notes
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+      data: null
+    });
+  }
+};
+
+exports.getNoteById = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid note ID format",
+        data: null
+      });
+    }
+
+    const note = await Note.findById(id);
+
+    if (!note) {
+      return res.status(404).json({
+        success: false,
+        message: "Note not found",
+        data: null
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Note fetched successfully",
+      data: note
     });
   } catch (error) {
     console.error(error);
