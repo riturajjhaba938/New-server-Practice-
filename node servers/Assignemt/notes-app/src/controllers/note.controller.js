@@ -58,3 +58,21 @@ exports.createBulkNotes = async (req, res) => {
     });
   }
 };
+
+exports.getAllNotes = async (req, res) => {
+  try {
+    const notes = await Note.find();
+    return res.status(200).json({
+      success: true,
+      message: "Notes fetched successfully",
+      data: notes
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+      data: null
+    });
+  }
+};
